@@ -1,0 +1,22 @@
+:root {
+  --clr-bg: #0f172a;
+  --clr-surface: #111827;
+
+  --clr-primary: #10b981;
+  --clr-primary-dark: #059669;
+
+  --clr-text: #f8fafc;
+  --clr-text-light: #94a3b8;
+
+  --clr-border: #1f2937;
+
+  --shadow: 0 15px 40px rgba(0,0,0,.18);
+
+  --transition: all .3s ease;
+
+  --radius-md: 14px;
+
+  --container-width: 1200px;
+
+  --navbar-height: 72px;
+}
