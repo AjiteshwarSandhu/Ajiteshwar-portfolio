@@ -74,7 +74,7 @@ const projects = [
       "Vite",
     ],
 
-    github: "#",
+    github: "https://github.com/AjiteshwarSandhu/ajiteshwar-portfolio",
   },
 ];
 
