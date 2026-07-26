@@ -1,8 +1,9 @@
 .hero {
-  min-height: auto;
-  padding: 5rem 0 6rem;   /* or whatever top/bottom spacing feels right */
-  display: flex;
-  align-items: center;
+    min-height: auto;
+    padding: 5rem 0 6rem;
+    /* or whatever top/bottom spacing feels right */
+    display: flex;
+    align-items: center;
 }
 
 .hero::before,
@@ -190,48 +191,48 @@
 /* ========================= */
 
 .socials {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .socials a {
-  width: 52px;
-  height: 52px;
+    width: 52px;
+    height: 52px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  flex-shrink: 0;
+    flex-shrink: 0;
 
-  border-radius: 14px;
+    border-radius: 14px;
 
-  background: var(--clr-surface);
+    background: var(--clr-surface);
 
-  border: 1px solid var(--clr-border);
+    border: 1px solid var(--clr-border);
 
-  color: var(--clr-text);
+    color: var(--clr-text);
 
-  font-size: 1.35rem;
+    font-size: 1.35rem;
 
-  transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .socials a svg {
-  width: 22px;
-  height: 22px;
+    width: 22px;
+    height: 22px;
 
-  display: block;
+    display: block;
 }
 
 .socials a:hover {
-  background: var(--clr-primary);
-  color: white;
+    background: var(--clr-primary);
+    color: white;
 
-  border-color: var(--clr-primary);
+    border-color: var(--clr-primary);
 
-  transform: translateY(-4px);
+    transform: translateY(-4px);
 }
 
 /* ========================= */
@@ -248,46 +249,41 @@
 }
 
 .codeCard {
-
     position: relative;
-
     width: 100%;
-
     max-width: 470px;
+    /* Back to original desktop size */
 
     border-radius: 18px;
-
     overflow: hidden;
 
     background: #111827;
+    border: 1px solid rgba(255, 255, 255, 0.06);
 
-    border: 1px solid rgba(255, 255, 255, .06);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
 
-    box-shadow:
-        0 30px 70px rgba(0, 0, 0, .35);
-
-    transition: .35s;
+    transition: 0.35s;
 }
 
-.codeCard::before{
+.codeCard::before {
 
-content:"";
+    content: "";
 
-position:absolute;
+    position: absolute;
 
-width:250px;
+    width: 250px;
 
-height:250px;
+    height: 250px;
 
-background:rgba(16,185,129,.18);
+    background: rgba(16, 185, 129, .18);
 
-filter:blur(100px);
+    filter: blur(100px);
 
-top:-120px;
+    top: -120px;
 
-right:-120px;
+    right: -120px;
 
-z-index:-1;
+    z-index: -1;
 }
 
 .codeCard:hover {
@@ -322,24 +318,26 @@ z-index:-1;
     background: #22c55e;
 }
 
-.codeCard pre{
+.codeCard pre {
+    margin: 0;
+    padding: 1.8rem;
 
-margin:0;
+    font-size: 0.88rem;
+    line-height: 2;
 
-padding:1.8rem;
+    overflow-x: auto;
+    overflow-y: visible;
 
-font-size:.88rem;
+    white-space: pre;
 
-line-height:2;
+    font-family:
+        "Fira Code",
+        Consolas,
+        monospace;
 
-overflow-x:auto;
+    color: #d1d5db;
 
-font-family:
-"Fira Code",
-Consolas,
-monospace;
-
-color:#d1d5db;
+    -webkit-overflow-scrolling: touch;
 }
 
 /* ========================= */
@@ -374,17 +372,33 @@ color:#d1d5db;
 /* ========================= */
 
 @media (max-width: 992px) {
+
+    .hero {
+        padding: 4.5rem 0;
+    }
+
     .container {
         grid-template-columns: 1fr;
-        gap: 4rem;
+        gap: 2.5rem;
     }
 
     .content {
+        order: 1;
+        max-width: 100%;
         text-align: center;
+    }
+
+    .visual {
+        order: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
 
     .description {
         margin-inline: auto;
+        max-width: 650px;
     }
 
     .actions,
@@ -392,29 +406,119 @@ color:#d1d5db;
         justify-content: center;
     }
 
-    .visual {
-        order: -1;
+    .codeCard {
+        width: 100%;
+        max-width: 380px;
+        margin-inline: auto;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
+
     .hero {
-        padding: 5rem 0;
-        min-height: auto;
+        padding: 3.5rem 0 4rem;
+    }
+
+    .container {
+        gap: 2rem;
+    }
+
+    .badge {
+        margin-bottom: 1rem;
+    }
+
+    .name {
+        font-size: clamp(2.8rem, 12vw, 3.5rem);
+        line-height: 1;
+        letter-spacing: -2px;
+        margin-bottom: 1rem;
+    }
+
+    .title {
+        font-size: 1.15rem;
+        margin-bottom: 1rem;
+    }
+
+    .description {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 2rem;
+        max-width: 100%;
     }
 
     .actions {
         flex-direction: column;
+        gap: .8rem;
+        margin-bottom: 1.8rem;
     }
 
     .primaryBtn,
     .secondaryBtn {
         width: 100%;
+        min-width: 0;
+    }
+
+    .socials {
         justify-content: center;
+        margin-bottom: .5rem;
+    }
+
+    .codeCard {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    .cardHeader {
+        padding: 14px 16px;
     }
 
     .codeCard pre {
-        font-size: 0.82rem;
-        padding: 1.5rem;
+        padding: 1.2rem;
+
+        font-size: 0.76rem;
+        line-height: 1.7;
+
+        overflow-x: auto;
+        overflow-y: visible;
+
+        white-space: pre;
+    }
+}
+
+@media (max-width:480px) {
+
+    .hero {
+        padding: 3rem 0 3.5rem;
+    }
+
+    .container {
+        width: min(100% - 2rem, 1150px);
+    }
+
+    .name {
+        font-size: 2.5rem;
+    }
+
+    .title {
+        font-size: 1.05rem;
+    }
+
+    .description {
+        font-size: .95rem;
+    }
+
+    .codeCard {
+        max-width: 100%;
+    }
+
+    .codeCard pre {
+        font-size: .68rem;
+        padding: .9rem;
+    }
+
+    .socials a {
+        width: 48px;
+        height: 48px;
     }
 }

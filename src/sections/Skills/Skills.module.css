@@ -119,12 +119,9 @@
 }
 
 .skillsGrid{
-
-  display:grid;
-
-  grid-template-columns:repeat(2,1fr);
-
-  gap:1rem;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+    gap:1rem;
 }
 
 .skillCard{

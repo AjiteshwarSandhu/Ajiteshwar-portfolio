@@ -63,7 +63,6 @@
 }
 
 .item:hover {
-
   transform: translateY(-5px);
 
   border-color: rgba(16,185,129,.4);
@@ -72,7 +71,6 @@
 }
 
 .item svg {
-
   width: 55px;
   height: 55px;
 
@@ -90,7 +88,6 @@
 }
 
 .item:hover svg {
-
   background: var(--clr-primary);
 
   color: white;
@@ -99,7 +96,6 @@
 }
 
 .item h4 {
-
   color: var(--clr-text);
 
   margin-bottom: .3rem;
@@ -108,14 +104,14 @@
 }
 
 .item span {
-
   color: var(--clr-text-light);
 
   font-size: .92rem;
+
+  word-break: break-word;
 }
 
 .buttons {
-
   margin-top: 3rem;
 
   display: flex;
@@ -127,7 +123,6 @@
 
 .resumeBtn,
 .contactBtn {
-
   padding: .95rem 2rem;
 
   border-radius: 14px;
@@ -140,7 +135,6 @@
 }
 
 .resumeBtn {
-
   background: linear-gradient(
       135deg,
       var(--clr-primary),
@@ -151,14 +145,12 @@
 }
 
 .resumeBtn:hover {
-
   transform: translateY(-3px);
 
   box-shadow: 0 15px 35px rgba(16,185,129,.35);
 }
 
 .contactBtn {
-
   border: 1px solid rgba(255,255,255,.12);
 
   color: var(--clr-text);
@@ -167,14 +159,12 @@
 }
 
 .contactBtn:hover {
-
   background: rgba(255,255,255,.1);
 
   transform: translateY(-3px);
 }
 
 .footer {
-
   margin-top: 5rem;
 
   text-align: center;
@@ -188,26 +178,106 @@
   padding-top: 2rem;
 }
 
-@media(max-width:768px){
+/* ========================= */
+/* MOBILE ONLY */
+/* ========================= */
 
-.contactCard{
+@media (max-width:768px){
 
-grid-template-columns:1fr;
+  .contact{
+    padding:4rem 0;
+  }
+
+  .title{
+    font-size:2.2rem;
+    line-height:1.15;
+  }
+
+  .description{
+    font-size:1rem;
+    line-height:1.7;
+    margin-bottom:2.5rem;
+    padding:0 .5rem;
+  }
+
+  .contactCard{
+    grid-template-columns:1fr;
+    gap:1rem;
+
+    padding:1.25rem;
+
+    border-radius:20px;
+  }
+
+  .item{
+    padding:1rem;
+    gap:.9rem;
+  }
+
+  .item svg{
+    width:48px;
+    height:48px;
+    padding:12px;
+  }
+
+  .item h4{
+    font-size:.95rem;
+  }
+
+  .item span{
+    font-size:.85rem;
+    line-height:1.5;
+  }
+
+  .buttons{
+    margin-top:2rem;
+
+    flex-direction:column;
+
+    gap:.8rem;
+  }
+
+  .resumeBtn,
+  .contactBtn{
+    width:100%;
+    text-align:center;
+    padding:1rem;
+  }
+
+  .footer{
+    margin-top:3rem;
+    font-size:.85rem;
+    padding-top:1.5rem;
+  }
 
 }
 
-.buttons{
+@media (max-width:480px){
 
-flex-direction:column;
+  .contact{
+    padding:3.5rem 0;
+  }
 
-}
+  .title{
+    font-size:2rem;
+  }
 
-.resumeBtn,
-.contactBtn{
+  .contactCard{
+    padding:1rem;
+  }
 
-width:100%;
-text-align:center;
+  .item{
+    padding:.9rem;
+  }
 
-}
+  .item svg{
+    width:44px;
+    height:44px;
+    padding:10px;
+  }
+
+  .item span{
+    font-size:.82rem;
+  }
 
 }

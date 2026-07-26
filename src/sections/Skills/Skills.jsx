@@ -86,7 +86,7 @@ const skillCategories = [
     icon: <FaDatabase />,
     skills: [
       { name: "MongoDB", icon: <SiMongodb /> },
-      { name: "PostgreSQL", icon: <SiPostgresql /> },
+      { name: "PostgreSQL ", icon: < SiPostgresql/> },
       { name: "MySQL", icon: <SiMysql /> },
     ],
   },
